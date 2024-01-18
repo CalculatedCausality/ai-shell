@@ -6,7 +6,7 @@ export function detectShell() {
   try {
     // Detect if we're running on win32 and assume powershell
     if (os.platform() === 'win32') {
-      return 'powershell';
+      return 'cmd';
     }
     // otherwise return current shell; default to bash
     return path.basename(os.userInfo().shell ?? 'bash');
